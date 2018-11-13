@@ -1,7 +1,7 @@
 open Lib.Sort
 open Alcotest
 
-let test_sort message sort ()= 
+let test_sort message sort () = 
   check (list int) (message ^ "4") (sort [4;3;2;1]) [1;2;3;4];
   check (list int) (message ^ "1") (sort [9;8;7;6;5]) [5;6;7;8;9];
   check (list int) (message ^ "2") (sort [-1;8;7;6;5]) [-1;5;6;7;8];

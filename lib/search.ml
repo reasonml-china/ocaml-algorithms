@@ -7,8 +7,6 @@ let binary_search x l =
       match mid_value with
       | _ when x = mid_value -> Some mid
       | _ when x < mid_value -> aux low (mid - 1)
-      | _  -> aux (mid + 1) high
+      | _ -> aux (mid + 1) high
   in 
   aux 0 (List.length l - 1)
-
-
