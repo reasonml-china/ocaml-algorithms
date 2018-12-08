@@ -1,8 +1,8 @@
 let rec bubble_sort l = 
-  let rec aux = function
+  let rec swap = function
     | [] | _::[] as l' -> l'
-    | x::y::tl -> if x > y then y::aux (x::tl) else x::aux (y::tl) in
-  let l' = aux l in 
+    | x::y::tl -> if x > y then y::swap (x::tl) else x::swap (y::tl) in
+  let l' = swap l in 
   if l' <> l then bubble_sort l' else l
 
 let rec selection_sort l = 
